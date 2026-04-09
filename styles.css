@@ -1,0 +1,268 @@
+:root {
+  --bg: #0b1020;
+  --card: #121a32;
+  --muted: #aab4d6;
+  --text: #f3f6ff;
+  --accent: #7c9bff;
+  --accent-strong: #5a7dff;
+  --border: #23305a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at 20% 0, #172345 0%, var(--bg) 45%);
+  color: var(--text);
+}
+
+.container {
+  width: min(1040px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgb(11 16 32 / 78%);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hero {
+  min-height: 74vh;
+  display: grid;
+  align-items: center;
+  padding: 5rem 0 3rem;
+}
+
+.eyebrow {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  margin: 0;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 64ch;
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.hero-cta,
+.contact-links {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin: 1.2rem 0;
+}
+
+.btn {
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.7rem 1.05rem;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn.primary {
+  background: var(--accent);
+  color: #030617;
+}
+
+.btn.primary:hover {
+  background: var(--accent-strong);
+}
+
+.btn.secondary {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.quick-facts {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+  color: var(--muted);
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.section {
+  padding: 2rem 0 3.5rem;
+}
+
+.section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.section p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline-item {
+  border: 1px solid var(--border);
+  background: rgb(18 26 50 / 65%);
+  padding: 1rem;
+  border-radius: 14px;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.timeline-date {
+  font-size: 0.92rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.timeline-item ul {
+  margin: 0;
+  color: var(--muted);
+  padding-left: 1.15rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: rgb(18 26 50 / 65%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.meta {
+  font-size: 0.92rem;
+  color: #d2dcff;
+}
+
+.tags {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tags li {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.45rem 0.7rem;
+  background: rgb(18 26 50 / 65%);
+  color: #d2dcff;
+  font-size: 0.92rem;
+}
+
+.contact {
+  padding-bottom: 5rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+
+.site-footer .container {
+  padding: 1.4rem 0;
+}
+
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: block;
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.35rem 0.55rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 1rem;
+    background: #0d152c;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    flex-direction: column;
+    width: 180px;
+    padding: 0.8rem;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .quick-facts {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}
