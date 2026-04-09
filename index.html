@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio website for job applications and networking."
+    />
+    <title>Portfolio | Professional Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="container nav">
+        <a class="brand" href="#home">Shayna Diamond-Reivich</a>
+        <button class="menu-toggle" aria-label="Open menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero container">
+        <div class="hero-content">
+          <p class="eyebrow">Open to opportunities</p>
+          <h1>Hello, I’m <span class="highlight">Shayna Diamond-Reivich</span>.</h1>
+          <p class="lead">
+            I build thoughtful products, solve complex problems, and collaborate
+            with teams to deliver measurable outcomes.
+          </p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact">Let’s Connect</a>
+            <a class="btn secondary" href="./resume.pdf">Download Resume</a>
+          </div>
+          <ul class="quick-facts">
+            <li><strong>Location:</strong> Philadelphia, Pennsylvania</li>
+            <li><strong>Specialty:</strong> Product, Engineering, and Strategy</li>
+            <li><strong>Focus:</strong> Impact-driven work</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="about" class="container section">
+        <h2>About Me</h2>
+        <p>
+          I’m a curious, execution-focused professional who enjoys turning
+          ambiguity into action. My background spans cross-functional
+          collaboration, user-centered thinking, and delivering high-quality
+          outcomes on tight timelines.
+        </p>
+        <p>
+          I care deeply about building products and systems that are useful,
+          inclusive, and scalable. I’m currently looking for roles where I can
+          contribute quickly, keep learning, and help teams ship meaningful work.
+        </p>
+      </section>
+
+      <section id="experience" class="container section">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-date">2024 – Present</div>
+            <div>
+              <h3>Current Role · Company Name</h3>
+              <p>
+                Led initiatives that improved delivery speed and team
+                effectiveness while maintaining high quality standards.
+              </p>
+              <ul>
+                <li>Improved a key workflow by 35% through process redesign.</li>
+                <li>
+                  Collaborated with design, engineering, and stakeholders to
+                  launch customer-facing improvements.
+                </li>
+                <li>
+                  Mentored teammates and documented best practices for smoother
+                  onboarding.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-date">2021 – 2024</div>
+            <div>
+              <h3>Previous Role · Company Name</h3>
+              <p>
+                Delivered projects across multiple priorities and owned outcomes
+                from planning through execution.
+              </p>
+              <ul>
+                <li>Reduced project risk through clearer milestone planning.</li>
+                <li>Shipped features that increased user satisfaction metrics.</li>
+                <li>Built reusable documentation and internal playbooks.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="container section">
+        <h2>Selected Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Project One</h3>
+            <p>
+              Short description of a project that highlights your impact,
+              technical depth, and business value.
+            </p>
+            <p class="meta">Tools: JavaScript, React, API Integration</p>
+          </article>
+          <article class="card">
+            <h3>Project Two</h3>
+            <p>
+              Explain the problem, your approach, and the measurable result in
+              one or two concise sentences.
+            </p>
+            <p class="meta">Tools: Python, SQL, Data Visualization</p>
+          </article>
+          <article class="card">
+            <h3>Project Three</h3>
+            <p>
+              Include a project showing collaboration, leadership, or process
+              improvements beyond pure technical implementation.
+            </p>
+            <p class="meta">Tools: Agile, Stakeholder Management, Analytics</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="container section">
+        <h2>Skills</h2>
+        <ul class="tags">
+          <li>Communication</li>
+          <li>Leadership</li>
+          <li>Problem Solving</li>
+          <li>Project Management</li>
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Data Analysis</li>
+          <li>Agile</li>
+          <li>Cross-functional Collaboration</li>
+          <li>Product Thinking</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="container section contact">
+        <h2>Let’s Work Together</h2>
+        <p>
+          I’m currently open to full-time roles, contract opportunities, and
+          meaningful collaborations.
+        </p>
+        <div class="contact-links">
+          <a class="btn primary" href="mailto:you@example.com">Email Me</a>
+          <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Shayna Diamond-Reivich. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
