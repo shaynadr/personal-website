@@ -278,6 +278,18 @@ h1 {
   background: var(--surface-soft);
 }
 
+.missing-image {
+  object-fit: contain !important;
+  opacity: 0.75;
+  background: repeating-linear-gradient(
+    135deg,
+    #e9edf7,
+    #e9edf7 10px,
+    #dfe6f4 10px,
+    #dfe6f4 20px
+  ) !important;
+}
+
 .gallery-item figcaption {
   padding: 0.6rem 0.7rem 0.75rem;
   color: var(--muted);
