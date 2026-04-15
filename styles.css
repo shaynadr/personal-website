@@ -121,6 +121,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 340px;
+  object-fit: contain;
   border: 0;
   border-radius: 10px;
   background: white;
@@ -268,13 +269,17 @@ h1 {
   box-shadow: var(--shadow);
   overflow: hidden;
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 
 .gallery-item img {
   display: block;
   width: 100%;
-  height: 190px;
-  object-fit: cover;
+  height: 230px;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.45rem;
   background: var(--surface-soft);
 }
 
@@ -294,14 +299,7 @@ h1 {
   padding: 0.6rem 0.7rem 0.75rem;
   color: var(--muted);
   font-size: 0.86rem;
-}
-
-.highlights-list {
-  margin: 1rem auto 0;
-  max-width: 760px;
-  text-align: left;
-  color: var(--muted);
-  line-height: 1.7;
+  margin-top: auto;
 }
 
 .meta {
@@ -388,6 +386,10 @@ h1 {
 
   .headshot-object {
     min-height: 280px;
+  }
+
+  .gallery-item img {
+    height: 200px;
   }
 
   .quick-facts {
