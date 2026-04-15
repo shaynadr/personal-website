@@ -45,6 +45,10 @@ const resolveImage = (img) => {
     const candidate = candidates[idx++];
     probe.onload = () => {
       img.src = candidate;
+      const link = img.closest("a");
+      if (link) {
+        link.href = candidate;
+      }
       img.classList.remove("missing-image");
     };
     probe.onerror = tryNext;

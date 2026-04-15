@@ -283,6 +283,10 @@ h1 {
   background: #fff;
 }
 
+.gallery-link {
+  display: block;
+}
+
 .missing-image {
   object-fit: contain !important;
   opacity: 0.75;
