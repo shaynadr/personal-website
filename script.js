@@ -59,3 +59,58 @@ const resolveImage = (img) => {
 };
 
 document.querySelectorAll(".auto-image").forEach(resolveImage);
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.querySelector(".lightbox-image");
+const lightboxClose = document.querySelector(".lightbox-close");
+
+const openLightbox = (src, alt) => {
+  if (!lightbox || !lightboxImage) return;
+  lightboxImage.src = src;
+  lightboxImage.alt = alt || "Expanded project screenshot";
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+};
+
+const closeLightbox = () => {
+  if (!lightbox || !lightboxImage) return;
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImage.src = "";
+};
+
+document.querySelectorAll(".gallery-item").forEach((item) => {
+  const link = item.querySelector(".gallery-link");
+  const image = item.querySelector("img");
+  const expandBtn = item.querySelector(".expand-btn");
+
+  if (!link || !image) return;
+
+  const handleOpen = (event) => {
+    event.preventDefault();
+    openLightbox(link.href, image.alt);
+  };
+
+  link.addEventListener("click", handleOpen);
+  if (expandBtn) {
+    expandBtn.addEventListener("click", handleOpen);
+  }
+});
+
+if (lightboxClose) {
+  lightboxClose.addEventListener("click", closeLightbox);
+}
+
+if (lightbox) {
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeLightbox();
+  }
+});
