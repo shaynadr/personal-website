@@ -253,6 +253,45 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
 }
 
+.project-gallery {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0.9rem;
+}
+
+.gallery-item {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  text-align: left;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  background: var(--surface-soft);
+}
+
+.gallery-item figcaption {
+  padding: 0.6rem 0.7rem 0.75rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.highlights-list {
+  margin: 1rem auto 0;
+  max-width: 760px;
+  text-align: left;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .meta {
   color: #2e477a;
   font-size: 0.9rem;
